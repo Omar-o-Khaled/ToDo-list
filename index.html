@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge-114</title>
+    <style>
+        .container{
+            width: 500px;
+            background-color: #eeeeee;
+            padding: 20px;
+            margin: 50px auto;
+            border-radius: 10px;
+        }
+        .static{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            border-radius: 30px;
+            overflow: hidden;
+        }
+        .container input{
+            height: 45px;
+            width: 100%;
+            border: 0;
+            padding-left: 20px;
+            outline: 0;
+            font-size: 18px;
+            color: #024548;
+        }
+        .container .btn_add{
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            cursor: pointer;
+            border: 0;
+            background-color: #006064;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            outline: 0;
+        }
+        .tasks{
+            padding-top: 30px;
+        }
+        .task_icon{
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 20px;
+            border-radius: 30px;
+            height: 45px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        .task_icon .text{
+            font-size: 20px;
+        }
+        .task_icon .del{
+            cursor: pointer;
+            background-color: #b71c1c;
+            color: white;
+            margin: 0;
+            font-size: 20px;
+            font-family: sans-serif;
+            height: 100%;
+            padding: 0 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+        }
+        .done{
+            position: absolute;
+            width: 20px;
+            left: -10px;
+            top: 50%;
+            transform: translate(0, -50%);
+            border: 2px solid #fffdfd;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .did{
+            opacity: 50%;
+            text-decoration: line-through;
+        }
+        .did .del{
+            pointer-events: none;
+        }
+        .clearAll{
+            background: #616161;
+            font-size: 30px;
+            padding: 5px;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+            margin-top: 50px;
+            text-transform: capitalize;
+            border-radius: 10px;
+        }
+        @media (max-width: 570px) {
+            .container{
+            width: 340px;
+            }
+            .container .btn_add,.task_icon .del{
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="static">
+            <input type="text" name="Task" id="Task">
+            <button class="btn_add">Add Task</button>
+        </div>
+        <div class="tasks"></div>
+        <div class="clearAll">clear All</div>
+    </div>
+
+    <script src="challenge.js"></script>
+</body>
+</html>
